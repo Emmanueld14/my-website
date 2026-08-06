@@ -8,7 +8,7 @@ import {
   type PhotoCategory,
 } from '@/data/photos'
 import { SectionHeading } from '@/components/layout/SectionHeading'
-import { cn } from '@/lib/utils'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 function Lightbox({
   photo,
@@ -99,29 +99,19 @@ export function Photography() {
           description="Shot on a Canon EOS Rebel T6 with an EF-S 18-55mm. Portraits, streets, and scenery — filter freely."
         />
 
-        <div
-          className="mb-8 flex flex-wrap gap-2"
-          role="tablist"
-          aria-label="Photo categories"
+        <Tabs
+          value={filter}
+          onValueChange={(value) => setFilter(value as PhotoCategory | 'all')}
+          className="mb-8"
         >
-          {photoCategories.map((cat) => (
-            <button
-              key={cat.id}
-              type="button"
-              role="tab"
-              aria-selected={filter === cat.id}
-              onClick={() => setFilter(cat.id)}
-              className={cn(
-                'rounded-full px-4 py-2 text-sm font-medium transition',
-                filter === cat.id
-                  ? 'bg-primary text-white shadow-soft'
-                  : 'bg-card text-muted ring-1 ring-border hover:text-ink',
-              )}
-            >
-              {cat.label}
-            </button>
-          ))}
-        </div>
+          <TabsList aria-label="Photo categories" className="h-auto flex-wrap">
+            {photoCategories.map((cat) => (
+              <TabsTrigger key={cat.id} value={cat.id}>
+                {cat.label}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+        </Tabs>
 
         <LayoutGroup>
           <motion.div
