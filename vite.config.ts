@@ -7,12 +7,11 @@ import tailwindcss from '@tailwindcss/vite'
 const rootDir = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
-  // App lives in /web; production build is committed to /docs for GitHub Pages
-  // (repo Pages source is legacy: main branch, folder `/`).
+  // Source app in /web; production files are synced to repo root for GitHub Pages
+  // (Pages source: branch main, folder `/` → https://emmanueld14.github.io/my-website/)
   root: path.resolve(rootDir, 'web'),
   publicDir: path.resolve(rootDir, 'public'),
-  // Served at https://emmanueld14.github.io/my-website/docs/
-  base: '/my-website/docs/',
+  base: '/my-website/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
@@ -20,11 +19,10 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: path.resolve(rootDir, 'docs'),
+    outDir: path.resolve(rootDir, 'dist'),
     emptyOutDir: true,
   },
   server: {
-    // Dev server at http://localhost:5173/my-website/docs/
     fs: {
       allow: [rootDir],
     },
