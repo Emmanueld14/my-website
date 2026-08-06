@@ -3,6 +3,7 @@ import Lenis from 'lenis'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { usePrefersReducedMotion } from './usePrefersReducedMotion'
+import { setLenisInstance } from '@/lib/scroll'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -10,7 +11,10 @@ export function useLenis() {
   const reducedMotion = usePrefersReducedMotion()
 
   useEffect(() => {
-    if (reducedMotion) return
+    if (reducedMotion) {
+      setLenisInstance(null)
+      return
+    }
 
     const lenis = new Lenis({
       duration: 1.1,
@@ -18,6 +22,7 @@ export function useLenis() {
       smoothWheel: true,
     })
 
+    setLenisInstance(lenis)
     lenis.on('scroll', ScrollTrigger.update)
 
     const ticker = (time: number) => {
@@ -28,6 +33,7 @@ export function useLenis() {
 
     return () => {
       gsap.ticker.remove(ticker)
+      setLenisInstance(null)
       lenis.destroy()
     }
   }, [reducedMotion])

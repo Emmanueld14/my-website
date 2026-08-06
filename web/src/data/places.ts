@@ -71,13 +71,3 @@ export const places: Place[] = [
     memory: 'Curious about the density of builders and clean design everywhere.',
   },
 ]
-
-export const navSections = [
-  { id: 'hero', label: 'Home' },
-  { id: 'story', label: 'My Story' },
-  { id: 'proof', label: 'Proof' },
-  { id: 'building', label: 'Building' },
-  { id: 'photography', label: 'Photography' },
-  { id: 'places', label: 'Where I’ve Been' },
-  { id: 'contact', label: 'Contact' },
-] as const
