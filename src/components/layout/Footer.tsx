@@ -1,10 +1,11 @@
 import { ArrowUp } from 'lucide-react'
 import { profile } from '@/data/profile'
-import { scrollToSection } from '@/hooks/useScrollTo'
+import { useNavNavigate } from '@/hooks/useNavNavigate'
 import { Button } from '@/components/ui/button'
 
 export function Footer() {
   const year = new Date().getFullYear()
+  const { goHome } = useNavNavigate()
 
   return (
     <footer className="border-t border-border/70 bg-background">
@@ -18,7 +19,7 @@ export function Footer() {
         <Button
           variant="outline"
           size="sm"
-          onClick={() => scrollToSection('hero')}
+          onClick={goHome}
           aria-label="Back to top"
         >
           Back to top

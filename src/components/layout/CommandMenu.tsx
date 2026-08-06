@@ -9,14 +9,14 @@ import {
   Sparkles,
   BookOpen,
 } from 'lucide-react'
-import { navSections } from '@/data/places'
-import { scrollToSection } from '@/hooks/useScrollTo'
+import { navItems } from '@/data/nav'
+import { useNavNavigate } from '@/hooks/useNavNavigate'
 import { cn } from '@/lib/utils'
 
 export const OPEN_COMMAND_MENU = 'open-command-menu'
 
 const icons: Record<string, ReactNode> = {
-  hero: <Home className="h-4 w-4" />,
+  home: <Home className="h-4 w-4" />,
   story: <BookOpen className="h-4 w-4" />,
   proof: <Sparkles className="h-4 w-4" />,
   building: <Rocket className="h-4 w-4" />,
@@ -27,6 +27,7 @@ const icons: Record<string, ReactNode> = {
 
 export function CommandMenu() {
   const [open, setOpen] = useState(false)
+  const { goToSection } = useNavNavigate()
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -54,9 +55,9 @@ export function CommandMenu() {
     }
   }, [open])
 
-  const go = (id: string) => {
+  const go = (sectionId: string) => {
     setOpen(false)
-    window.setTimeout(() => scrollToSection(id), 50)
+    window.setTimeout(() => goToSection(sectionId), 50)
   }
 
   if (!open) return null
@@ -84,17 +85,17 @@ export function CommandMenu() {
               heading="Navigate"
               className="px-1 py-1 text-xs text-muted"
             >
-              {navSections.map((section) => (
+              {navItems.map((item) => (
                 <Command.Item
-                  key={section.id}
-                  value={section.label}
-                  onSelect={() => go(section.id)}
+                  key={item.id}
+                  value={item.label}
+                  onSelect={() => go(item.sectionId)}
                   className={cn(
                     'flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-body aria-selected:bg-surface aria-selected:text-ink',
                   )}
                 >
-                  <span className="text-primary">{icons[section.id]}</span>
-                  {section.label}
+                  <span className="text-primary">{icons[item.id]}</span>
+                  {item.label}
                 </Command.Item>
               ))}
             </Command.Group>
