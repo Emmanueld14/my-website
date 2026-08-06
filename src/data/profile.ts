@@ -8,12 +8,12 @@ export type SocialLink = {
 export const profile = {
   name: 'Manuel',
   fullName: 'Manuel',
-  tagline: 'Building ideas that create impact.',
-  roles: ['Student', 'Founder', 'Builder'] as const,
+  tagline: 'Just living, one day at a time.',
+  roles: ['Student', 'Explorer', 'Builder'] as const,
   location: 'Nairobi, Kenya',
   school: 'Form 3',
   intro:
-    "I'm a Form 3 student in Nairobi who can't stop building. Whether it's Bloomly, a debate round, or a photo on my Canon, I'm chasing ideas that actually help people — starting with Kenyan youth.",
+    "I'm just a teenager in Nairobi trying to figure things out — some days that's Bloomly, some days it's a debate round, some days it's just my Canon and whatever catches my eye. No grand plan, just curiosity and taking it one day at a time 😊",
   heroPhoto: {
     src: 'https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&w=1600&q=80',
     alt: 'Portrait of Manuel — placeholder photo, replace with your own',
