@@ -13,7 +13,7 @@ export const timeline: TimelineEntry[] = [
     year: 'Early years',
     title: 'Where it started',
     summary:
-      'Grew up in Nairobi asking too many questions. Books, gadgets, and the quiet thrill of figuring things out set the tone for everything that followed.',
+      'Grew up in Kitengela asking too many questions — how does this work, why does this happen when that happens. Never really stopped; just turned it into a habit of exploring.',
     photo:
       'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=80',
     photoAlt: 'Nairobi skyline at dusk — placeholder',
@@ -23,7 +23,7 @@ export const timeline: TimelineEntry[] = [
     year: 'Form 1–2',
     title: 'Leadership & competition',
     summary:
-      'Debate stages, team huddles, and late-night prep sessions taught me how to listen hard, argue clear, and lead without needing the loudest voice in the room.',
+      "Never thought debate was really 'my thing' until high school — that's where I found the version of my voice I didn't know I had.",
     photo:
       'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80',
     photoAlt: 'Students collaborating — placeholder',
@@ -33,7 +33,7 @@ export const timeline: TimelineEntry[] = [
     year: '2024',
     title: 'World Scholars Cup',
     summary:
-      'Gold in Writing. A blur of research, teamwork, and rooms full of curious minds from everywhere — proof that ideas travel further when you write them well.',
+      'Mostly trial and error — writing drafts, losing debates, getting back up — until it all came together and my team walked out on top.',
     photo:
       'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80',
     photoAlt: 'Writing and study desk — placeholder',
@@ -43,7 +43,7 @@ export const timeline: TimelineEntry[] = [
     year: '2024–2025',
     title: 'IFLC & debate circuits',
     summary:
-      'International forums, sharper arguments, and friends across borders. Each round stretched how I think about leadership, culture, and what young people can push for.',
+      "Never thought I could dance — still can't, honestly — but it was worth the embarrassment. Made real friends and got to experience Chicago along the way.",
     photo:
       'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=1200&q=80',
     photoAlt: 'Conference hall — placeholder',
@@ -53,7 +53,7 @@ export const timeline: TimelineEntry[] = [
     year: '2025',
     title: 'FWWMUN — Abu Dhabi',
     summary:
-      'Walking into rooms in Abu Dhabi representing ideas bigger than myself. Diplomacy, pressure, and the reminder that Kenya’s youth voice belongs on global stages.',
+      "Diplomacy was never really on my radar — but stepping into that world in Abu Dhabi is what got me caring about advocating for people, wherever they are.",
     photo:
       'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80',
     photoAlt: 'Abu Dhabi skyline — placeholder',
