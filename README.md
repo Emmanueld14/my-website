@@ -16,6 +16,14 @@ npm run build
 npm run preview
 ```
 
+## Live site (GitHub Pages)
+
+After this lands on `main`, the site deploys automatically to:
+
+**https://Emmanueld14.github.io/my-website/**
+
+One-time setup (if Pages isn’t enabled yet): repo **Settings → Pages → Source → GitHub Actions**.
+
 ## Edit content
 
 All copy, achievements, photos, timeline beats, projects, and places live in typed data files:

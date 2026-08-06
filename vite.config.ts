@@ -7,6 +7,8 @@ import tailwindcss from '@tailwindcss/vite'
 const rootDir = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
+  // GitHub Pages project site: https://Emmanueld14.github.io/my-website/
+  base: '/my-website/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
@@ -14,3 +16,4 @@ export default defineConfig({
     },
   },
 })
+

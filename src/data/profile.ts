@@ -18,7 +18,7 @@ export const profile = {
     src: 'https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&w=1600&q=80',
     alt: 'Portrait of Manuel — placeholder photo, replace with your own',
   },
-  resumeUrl: '/resume.pdf',
+  resumeUrl: `${import.meta.env.BASE_URL}resume.pdf`,
   email: 'hello@manuel.ke',
   socials: [
     {
