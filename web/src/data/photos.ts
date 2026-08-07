@@ -49,7 +49,7 @@ export const photos: Photo[] = [
   {
     id: 'gallery-church',
     title: 'Spire light',
-    location: 'Nairobi, Kenya',
+    location: 'Lake View, Chicago',
     category: 'street',
     camera: 'Samsung Galaxy A54 5G',
     lens: '50MP main',
