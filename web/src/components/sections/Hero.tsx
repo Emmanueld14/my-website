@@ -20,7 +20,7 @@ export function Hero() {
           sizes="100vw"
           decoding="async"
           fetchPriority="high"
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[center_18%] md:object-[72%_18%]"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[center_48%] md:object-[68%_45%]"
           style={{
             // Avoid any browser “optimize” that softens photos
             imageRendering: 'auto',
