@@ -14,23 +14,15 @@ export function Hero() {
         <img
           src={profile.heroPhoto.src}
           alt=""
-          className="h-full w-full object-cover object-center"
-          width={1600}
-          height={2000}
+          className="h-full w-full object-cover object-[center_18%] md:object-[72%_18%]"
+          width={720}
+          height={1280}
+          decoding="async"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/88 to-background/35 dark:from-background dark:via-background/90 dark:to-background/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
-        <motion.div
-          className="absolute -left-16 top-24 h-72 w-72 rounded-full bg-primary/20 blur-3xl"
-          animate={{ x: [0, 24, 0], y: [0, 16, 0] }}
-          transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="absolute bottom-20 right-10 h-64 w-64 rounded-full bg-secondary/15 blur-3xl"
-          animate={{ x: [0, -20, 0], y: [0, -12, 0] }}
-          transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
-        />
+        {/* Soft scrim so type stays readable without muting the photo */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/20 dark:from-background dark:via-background/85 dark:to-background/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/25" />
       </div>
 
       {/* Visually hidden full alt for screen readers */}

@@ -15,8 +15,8 @@ export const profile = {
   intro:
     "I'm just a teenager in Nairobi trying to figure things out — some days that's Bloomly, some days it's a debate round, some days it's just my Canon and whatever catches my eye. No grand plan, just curiosity and taking it one day at a time 😊",
   heroPhoto: {
-    src: 'https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&w=1600&q=80',
-    alt: 'Portrait of Manuel — placeholder photo, replace with your own',
+    src: `${import.meta.env.BASE_URL}images/manuel-hero.jpg`,
+    alt: 'Manuel smiling outdoors in Nairobi',
   },
   resumeUrl: `${import.meta.env.BASE_URL}resume.pdf`,
   email: 'hello@manuel.ke',
