@@ -96,7 +96,7 @@ export function Photography() {
         <SectionHeading
           eyebrow="Photography"
           title="Light, place, and quiet frames"
-          description="Shot on a Canon EOS Rebel T6 with an EF-S 18-55mm. Portraits, streets, and scenery — filter freely."
+          description="Canon EOS Rebel T6 and Samsung Galaxy A54 5G (50MP). Portraits, streets, and scenery — filter freely."
         />
 
         <Tabs

@@ -24,6 +24,17 @@ export const defaultLens = 'EF-S 18-55mm'
 
 export const photos: Photo[] = [
   {
+    id: 'manuel-a54',
+    title: 'Patio light',
+    location: 'Nairobi, Kenya',
+    category: 'portraits',
+    camera: 'Samsung Galaxy A54 5G',
+    lens: '50MP main',
+    src: `${import.meta.env.BASE_URL}images/manuel-hero.jpg`,
+    width: 2,
+    height: 3,
+  },
+  {
     id: 'p1',
     title: 'Golden hour, Westlands',
     location: 'Nairobi, Kenya',
@@ -34,6 +45,7 @@ export const photos: Photo[] = [
     width: 3,
     height: 4,
   },
+
   {
     id: 'p2',
     title: 'Matatu color',
