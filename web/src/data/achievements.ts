@@ -16,8 +16,10 @@ export const achievements: Achievement[] = [
     date: '2024',
     location: 'Regional / Global',
     photos: [
-      'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1000&q=80',
+      `${import.meta.env.BASE_URL}images/wsc/wsc-01.jpg`,
+      `${import.meta.env.BASE_URL}images/wsc/wsc-02.jpg`,
+      `${import.meta.env.BASE_URL}images/wsc/wsc-03.jpg`,
+      `${import.meta.env.BASE_URL}images/wsc/wsc-04.jpg`,
     ],
     description:
       'Took home gold in Writing after months of research sprints and collaborative debate prep. Learned how clarity under pressure turns into persuasion.',
