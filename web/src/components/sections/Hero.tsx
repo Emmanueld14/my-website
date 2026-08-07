@@ -10,22 +10,33 @@ export function Hero() {
       id="hero"
       className="relative flex min-h-[100svh] items-end overflow-hidden"
     >
-      <div className="absolute inset-0" aria-hidden>
+      {/* Image layer — no CSS blur/filter on the photo itself */}
+      <div className="absolute inset-0 overflow-hidden" aria-hidden>
         <img
           src={profile.heroPhoto.src}
           alt=""
-          className="h-full w-full object-cover object-[center_18%] md:object-[72%_18%]"
-          width={720}
-          height={1280}
+          width={profile.heroPhoto.width}
+          height={profile.heroPhoto.height}
+          sizes="100vw"
           decoding="async"
           fetchPriority="high"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[center_18%] md:object-[72%_18%]"
+          style={{
+            // Avoid any browser “optimize” that softens photos
+            imageRendering: 'auto',
+            WebkitBackfaceVisibility: 'hidden',
+            backfaceVisibility: 'hidden',
+            transform: 'translateZ(0)',
+          }}
         />
-        {/* Soft scrim so type stays readable without muting the photo */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/20 dark:from-background dark:via-background/85 dark:to-background/35" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/25" />
       </div>
 
-      {/* Visually hidden full alt for screen readers */}
+      {/* Overlay layer — separate from the image so tint ≠ blur */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden>
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/55 to-transparent dark:from-background/95 dark:via-background/60 dark:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-background/15" />
+      </div>
+
       <span className="sr-only">{profile.heroPhoto.alt}</span>
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-24 pt-28 sm:px-8 sm:pb-28">
