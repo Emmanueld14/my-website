@@ -1,0 +1,23 @@
+name: Bloomly login keepalive
+
+# bloomly.co.ke login talks to the free-tier Supabase project. After a week
+# of inactivity that project pauses, DNS disappears, and the login form shows
+# "Failed to fetch". This job pings Auth and restores the project if needed.
+
+on:
+  schedule:
+    - cron: "0 8 * * 1,4"
+  workflow_dispatch:
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Keep Bloomly Auth awake
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+        run: node scripts/bloomly-keepalive.mjs
